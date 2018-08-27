@@ -28,3 +28,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\DI\Foo\FooInterface: '@App\DI\Foo\Foo'
+
+    App\DI\Foo\FooDecorator:
+        decorates: App\DI\Foo\FooInterface
+
+    App\DI\Bar\BarInterface: '@App\DI\Bar\Bar'
+
+    App\DI\Bar\BarDecorator:
+        decorates: App\DI\Bar\BarInterface
